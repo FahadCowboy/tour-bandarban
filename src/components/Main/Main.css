@@ -11,6 +11,7 @@ main{
 #friend-calc-container{
    display: grid;
    grid-template-columns: 10fr 3fr;
+   gap: 30px;
 }
 
 #friends-wrapper{
@@ -18,3 +19,7 @@ main{
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1.4rem;
 }
+
+/* #calc-wrapper{
+   position: sticky;
+} */

@@ -3,7 +3,7 @@
    color: rgb(250, 245, 200);
    background-color: rgb(56 64 68 / 40%);
    padding: 1.8rem 0.8rem;
-   border-radius: 4px;
+   border-radius: 10px;
 }
 
 .img-wrapper{
@@ -24,4 +24,23 @@ h3{
 p{
    font-size: 1rem;
    margin-top: 12px;
+}
+
+.btn-wrapper{
+   margin-top: 20px;
+}
+
+.calculate-btn{
+   padding: 6px 30px;
+   background-color: rgb(179 112 26);
+   border: none;
+   color:rgb(250, 245, 200);
+   border-radius: 3px;
+   font-size: 1.1rem;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.calculate-btn:hover{
+   background-color: rgb(128 72 0);
 }

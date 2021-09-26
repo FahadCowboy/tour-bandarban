@@ -5,6 +5,8 @@ import './Main.css';
 
 const Main = () => {
    const [friends, setFriends] = useState([])
+   const [selectedFriends, setSelectedFriend] = useState([])
+
 
    useEffect(() => {
       fetch('./friends.json')
@@ -12,6 +14,35 @@ const Main = () => {
       .then(data => setFriends(data))
    }, [])
    
+   const addMoney = singleFriend => {
+      // if(selectedFriends)
+
+      let key = singleFriend._id
+      console.log(key)
+      
+      
+      if(selectedFriends.length === 0){
+         const newFriend = [...selectedFriends, singleFriend]
+         setSelectedFriend(newFriend)
+      } else{
+         let isTrue = true
+         for(const friend of selectedFriends){
+            if(friend._id === key){
+               isTrue = false
+               break
+            }
+            console.log(isTrue)
+         }
+
+         if(isTrue) {
+            const newFriend = [...selectedFriends, singleFriend]
+            setSelectedFriend(newFriend)
+         }
+      }
+      
+         
+   
+   }
 
    return (
       <main>
@@ -19,11 +50,11 @@ const Main = () => {
             <div id="friend-calc-container">
                <div id="friends-wrapper">
                   {
-                     friends.map(friend => <Friends friend={friend}></Friends>)
+                     friends.map(friend => <Friends key={friend._id} friend={friend} addMoney={addMoney}></Friends>)
                   }
                </div>
-               <div>
-                  <Calculation></Calculation>
+               <div id="calc-wrapper" className="sticky">
+                  <Calculation friends={selectedFriends}></Calculation>
                </div>
             </div>
          </div>
