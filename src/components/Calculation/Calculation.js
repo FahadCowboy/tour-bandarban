@@ -3,13 +3,12 @@ import SelectedFriend from '../SelectedFriend/SelectedFriend';
 import './Calculation.css'
 
 const Calculation = props => {
-   // const budget} = props.friend
    const friendsArr = props.friends
-   console.log(props.friends)
    const sumBudget = friendsArr.reduce((prev, curr) => prev+curr.budget, 0)
    return (
       <div className="calc-container">
-         <h3>Collected Fund: <span id="collected-amount">{sumBudget}</span> Taka</h3>
+         <h3>Total Fund: &#2547;<span id="collected-amount">{sumBudget}</span></h3>
+         <h3>Member Added: &#2547;<span id="collected-amount">{props.friends.length}</span></h3>
          <div className="selected-wrap">
             {
                friendsArr.map(friend => <SelectedFriend 

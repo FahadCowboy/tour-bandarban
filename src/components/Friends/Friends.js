@@ -17,7 +17,7 @@ const Friends = props => {
             <p>Age: {age}</p>
             <p>Email: {email}</p>
             <p>Phone: {phone}</p>
-            <p>Budget: {budget}</p>
+            <p>Budget: &#2547;{budget}</p>
          </div>
          <div className="btn-wrapper">
             <button className="calculate-btn" onClick={() => props.addMoney(props.friend)}><FontAwesomeIcon icon={faCalculator}></FontAwesomeIcon> Count budget</button>

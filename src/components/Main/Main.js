@@ -15,11 +15,7 @@ const Main = () => {
    }, [])
    
    const addMoney = singleFriend => {
-      // if(selectedFriends)
-
       let key = singleFriend._id
-      console.log(key)
-      
       
       if(selectedFriends.length === 0){
          const newFriend = [...selectedFriends, singleFriend]
@@ -31,7 +27,6 @@ const Main = () => {
                isTrue = false
                break
             }
-            console.log(isTrue)
          }
 
          if(isTrue) {
@@ -39,9 +34,10 @@ const Main = () => {
             setSelectedFriend(newFriend)
          }
       }
-      
-         
-   
+   }
+
+   const deleteSelectedFriend = id => {
+      console.log(id)
    }
 
    return (

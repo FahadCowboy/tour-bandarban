@@ -20,8 +20,7 @@
 
 .name-budget-wrap{
    text-align: left;
-   flex-basis: 71%;
-   /* justify-content: center; */
+   flex-basis: 59%;
 }
 
 .name-budget-wrap>h3{
@@ -32,4 +31,11 @@
 
 .name-budget-wrap p{
    font-size: 1rem;
+}
+
+.cross-icon{
+   font-size: 1.5rem;
+   margin: 0 9px 0 0;
+   color:#ff3737;
+   cursor: pointer;
 }
